@@ -13,6 +13,7 @@
     "lint:style:fix": "stylelint --fix 'src/**/*.{css,scss,vue}'"
   },
   "dependencies": {
+    "pinia": "^2.0.17",
     "sass": "^1.54.0",
     "vue": "^3.2.37",
     "vue-router": "^4.1.3"
