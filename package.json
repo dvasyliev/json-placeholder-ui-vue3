@@ -8,7 +8,9 @@
     "build": "vite build",
     "preview": "vite preview",
     "lint:script": "eslint 'src/**/*.{js,vue,json}'",
-    "lint:script:fix": "eslint --fix 'src/**/*.{js,vue,json}'"
+    "lint:script:fix": "eslint --fix 'src/**/*.{js,vue,json}'",
+    "lint:style": "stylelint 'src/**/*.{css,scss,vue}'",
+    "lint:style:fix": "stylelint --fix 'src/**/*.{css,scss,vue}'"
   },
   "dependencies": {
     "vue": "^3.2.37"
@@ -19,7 +21,11 @@
     "eslint-config-prettier": "^8.5.0",
     "eslint-plugin-vue": "^9.3.0",
     "prettier": "^2.7.1",
+    "stylelint": "^14.9.1",
+    "stylelint-config-prettier": "^9.0.3",
+    "stylelint-config-recommended-vue": "^1.4.0",
     "vite": "^3.0.0",
-    "vite-plugin-eslint": "^1.7.0"
+    "vite-plugin-eslint": "^1.7.0",
+    "vite-plugin-stylelint": "^3.0.4"
   }
 }
