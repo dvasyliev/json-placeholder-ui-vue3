@@ -25,5 +25,9 @@ export const useUsersStore = defineStore('users', {
 
       this.user = user
     },
+
+    resetUser() {
+      this.user = null
+    },
   },
 })

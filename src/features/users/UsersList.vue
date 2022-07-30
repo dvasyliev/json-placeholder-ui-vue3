@@ -7,7 +7,7 @@
       @click="onSelect(user.id)"
     >
       <div class="UsersList-avatar">
-        <Avatar :name="user.name" />
+        <Avatar :name="user.name" size="large" />
       </div>
       <div class="UsersList-name">
         {{ user.name }}

@@ -1,5 +1,10 @@
 const Welcome = import(/* webpackChunkName: "welcome" */ '@/pages/Welcome.vue')
-const Login = import(/* webpackChunkName: "login" */ '@/pages/Login.vue')
+
+const SignIn = import(/* webpackChunkName: "sign-in" */ '@/pages/SignIn.vue')
+const SignOut = import(/* webpackChunkName: "sign-out" */ '@/pages/SignOut.vue')
+
+const Profile = import(/* webpackChunkName: "profile" */ '@/pages/Profile.vue')
+
 const Posts = import(/* webpackChunkName: "posts" */ '@/pages/Posts.vue')
 const Albums = import(/* webpackChunkName: "albums" */ '@/pages/Albums.vue')
 const Todos = import(/* webpackChunkName: "todos" */ '@/pages/Todos.vue')
@@ -12,9 +17,20 @@ export const routes = [
   },
 
   {
-    path: '/login',
-    name: 'login',
-    component: Login,
+    path: '/sign-in',
+    name: 'sign-in',
+    component: SignIn,
+  },
+  {
+    path: '/sign-out',
+    name: 'sign-out',
+    component: SignOut,
+  },
+
+  {
+    path: '/profile',
+    name: 'profile',
+    component: Profile,
   },
 
   {

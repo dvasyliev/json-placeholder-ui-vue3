@@ -13,6 +13,7 @@
     "lint:style:fix": "stylelint --fix 'src/**/*.{css,scss,vue}'"
   },
   "dependencies": {
+    "@vueuse/core": "^9.0.2",
     "axios": "^0.27.2",
     "lodash": "^4.17.21",
     "material-icons": "^1.11.8",
