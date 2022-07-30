@@ -34,6 +34,7 @@ export const routes = [
     component: import(/* webpackChunkName: "profile" */ '@/pages/Profile.vue'),
     meta: {
       access: USER_ACCESS.user,
+      layout: LAYOUT_NAMES.appLayout,
     },
   },
 
