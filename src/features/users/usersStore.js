@@ -30,4 +30,8 @@ export const useUsersStore = defineStore('users', {
       this.user = null
     },
   },
+  persist: {
+    key: 'userStore',
+    paths: ['user'],
+  },
 })
