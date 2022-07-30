@@ -4,5 +4,5 @@ import { useUsersStore } from '@/features/users'
 const userStore = useUsersStore()
 
 userStore.resetUser()
-window.location = '/'
+window.location = '/welcome'
 </script>

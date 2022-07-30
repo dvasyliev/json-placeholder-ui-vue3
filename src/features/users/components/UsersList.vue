@@ -17,7 +17,7 @@
 </template>
 
 <script setup>
-import { Avatar } from '@/shared/components/Avatar'
+import Avatar from '@/shared/components/Avatar'
 
 const $props = defineProps({
   users: { type: Array, default: () => [] },

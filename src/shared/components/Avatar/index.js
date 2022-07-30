@@ -1,1 +1,3 @@
-export { default as Avatar } from './Avatar.vue'
+import Avatar from './Avatar.vue'
+
+export default Avatar
