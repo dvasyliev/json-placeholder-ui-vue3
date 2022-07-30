@@ -66,4 +66,9 @@ export const routes = [
       layout: LAYOUT_NAMES.appLayout,
     },
   },
+
+  {
+    path: '/:pathMatch(.*)*',
+    component: import(/* webpackChunkName: "not-found" */ '@/pages/NotFound.vue'),
+  },
 ]
