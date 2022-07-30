@@ -1,15 +1,16 @@
 <template>
-  <div class="UsersList">
+  <div class="UserList">
     <div
       v-for="user in $props.users"
       :key="user.id"
-      class="UsersList-item"
+      class="UserList-item"
       @click="onSelect(user.id)"
     >
-      <div class="UsersList-avatar">
+      <div class="UserList-avatar">
         <Avatar :name="user.name" size="large" />
       </div>
-      <div class="UsersList-name">
+
+      <div class="UserList-name">
         {{ user.name }}
       </div>
     </div>
@@ -37,7 +38,7 @@ $itemMargin: $indent;
 $itemHorizontalPadding: $indent * 2;
 $itemVerticalPadding: $indent * 4;
 
-.UsersList {
+.UserList {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;

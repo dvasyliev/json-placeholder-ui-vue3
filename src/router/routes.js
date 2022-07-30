@@ -1,4 +1,4 @@
-import { USER_ACCESS } from '@/features/users'
+import { USER_ACCESS } from '@/features/User'
 import { LAYOUT_NAMES } from '@/shared/data/layout'
 
 export const routes = [

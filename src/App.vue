@@ -12,6 +12,6 @@
 import AppLayout from '@/shared/layouts/AppLayout.vue'
 import Logo from '@/shared/views/Logo.vue'
 import Navigation from '@/shared/views/Navigation.vue'
-import { UserDropdown } from '@/features/users'
+import { UserDropdown } from '@/features/user'
 import { LAYOUT_NAMES } from '@/shared/data/layout'
 </script>

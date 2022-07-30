@@ -1,5 +1,0 @@
-export { default as UsersList } from './components/UsersList.vue'
-export { default as UserDropdown } from './components/UserDropdown.vue'
-export * from './usersData'
-export * from './usersService'
-export * from './usersStore'

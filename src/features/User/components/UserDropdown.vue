@@ -13,12 +13,12 @@ import { useRouter } from 'vue-router'
 import Avatar from '@/shared/components/Avatar'
 import Dropdown from '@/shared/components/Dropdown.vue'
 import List from '@/shared/components/List.vue'
-import { useUsersStore } from '../usersStore'
+import { useUserStore } from '../userStore'
 
 const router = useRouter()
-const usersStore = useUsersStore()
+const userStore = useUserStore()
 
-const { user } = storeToRefs(usersStore)
+const { user } = storeToRefs(userStore)
 
 const items = [
   { key: 'profile', label: 'Profile', action: () => router.push({ name: 'profile' }) },

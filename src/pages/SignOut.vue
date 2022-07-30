@@ -1,7 +1,7 @@
 <script setup>
-import { useUsersStore } from '@/features/users'
+import { useUserStore } from '@/features/User'
 
-const userStore = useUsersStore()
+const userStore = useUserStore()
 
 userStore.resetUser()
 window.location = '/welcome'

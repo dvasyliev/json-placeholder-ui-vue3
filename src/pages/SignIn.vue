@@ -1,22 +1,22 @@
 <template>
   <h3>Choose your user</h3>
-  <UsersList :users="users" @select="onSelectUser" />
+  <UserList :users="users" @select="onSelectUser" />
   <button @click="$router.back()">Back</button>
 </template>
 
 <script setup>
 import { storeToRefs } from 'pinia'
-import { UsersList, useUsersStore } from '@/features/users'
+import { UserList, useUserStore } from '@/features/User'
 import { useRouter } from 'vue-router'
 
 const router = useRouter()
-const usersStore = useUsersStore()
-const { users } = storeToRefs(usersStore)
+const userStore = useUserStore()
+const { users } = storeToRefs(userStore)
 
-usersStore.getUsers()
+userStore.getUsers()
 
 function onSelectUser({ userId }) {
-  usersStore.setUser(userId)
+  userStore.setUser(userId)
   router.push({ name: 'posts' })
 }
 </script>

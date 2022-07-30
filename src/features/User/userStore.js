@@ -1,13 +1,13 @@
 import { defineStore } from 'pinia'
 import find from 'lodash/find'
-import { getUsers } from './usersService'
+import { getUsers } from './userService'
 
 const initialState = {
   user: null,
   users: [],
 }
 
-export const useUsersStore = defineStore('users', {
+export const useUserStore = defineStore('user', {
   state: () => initialState,
   actions: {
     async getUsers() {
