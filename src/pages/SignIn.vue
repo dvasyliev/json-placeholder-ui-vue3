@@ -6,17 +6,17 @@
 
 <script setup>
 import { storeToRefs } from 'pinia'
-import { UserList, useUserStore } from '@/features/User'
+import { UserList, useUsersStore } from '@/features/users'
 import { useRouter } from 'vue-router'
 
 const router = useRouter()
-const userStore = useUserStore()
-const { users } = storeToRefs(userStore)
+const usersStore = useUsersStore()
+const { users } = storeToRefs(usersStore)
 
-userStore.getUsers()
+usersStore.getUsers()
 
 function onSelectUser({ userId }) {
-  userStore.setUser(userId)
+  usersStore.setUser(userId)
   router.push({ name: 'posts' })
 }
 </script>

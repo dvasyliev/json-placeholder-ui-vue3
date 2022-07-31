@@ -1,8 +1,8 @@
 <script setup>
-import { useUserStore } from '@/features/User'
+import { useUsersStore } from '@/features/users'
 
-const userStore = useUserStore()
+const usersStore = useUsersStore()
 
-userStore.resetUser()
+usersStore.resetUser()
 window.location = '/'
 </script>

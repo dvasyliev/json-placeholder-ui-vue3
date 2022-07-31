@@ -1,13 +1,13 @@
 import { defineStore } from 'pinia'
 import find from 'lodash/find'
-import { getUsers } from './userService'
+import { getUsers } from './usersService'
 
 const initialState = {
   user: null,
   users: [],
 }
 
-export const useUserStore = defineStore('user', {
+export const useUsersStore = defineStore('users', {
   state: () => initialState,
   actions: {
     async getUsers() {
@@ -31,7 +31,7 @@ export const useUserStore = defineStore('user', {
     },
   },
   persist: {
-    key: 'userStore',
+    key: 'postsStore',
     paths: ['user'],
   },
 })

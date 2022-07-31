@@ -1,8 +1,8 @@
-import { useUserStore, USER_ACCESS } from '@/features/User'
+import { useUsersStore, USER_ACCESS } from '@/features/users'
 
 export const authGuard = async (to, from, next) => {
-  const userStore = useUserStore()
-  const isAuthenticated = !!userStore.user
+  const usersStore = useUsersStore()
+  const isAuthenticated = !!usersStore.user
 
   // Guest tries visit user page
   if (!isAuthenticated && to.meta.access === USER_ACCESS.user) {
