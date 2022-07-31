@@ -4,6 +4,7 @@ import { getPosts } from './postsService'
 const initialState = {
   user: null,
   posts: [],
+  postsTotal: 0,
   postsParams: {
     _limit: 10,
     _start: 0,
@@ -16,12 +17,17 @@ export const usePostsStore = defineStore('posts', {
   actions: {
     async getPosts() {
       try {
-        const { data } = await getPosts(this.postsParams)
+        const { data, headers } = await getPosts(this.postsParams)
 
         this.posts = data
+        this.postsTotal = Number(headers['x-total-count'])
       } catch (error) {
         return error
       }
+    },
+
+    setPostsParams(params) {
+      this.postsParams = { ...this.postsParams, ...params }
     },
   },
 })
