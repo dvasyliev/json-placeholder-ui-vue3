@@ -4,7 +4,7 @@
       v-for="user in $props.users"
       :key="user.id"
       class="UserList-item"
-      @click="onSelect(user.id)"
+      @click="onClick(user.id)"
     >
       <div class="UserList-avatar">
         <Avatar :name="user.name" size="large" />
@@ -24,10 +24,10 @@ const $props = defineProps({
   users: { type: Array, default: () => [] },
 })
 
-const $emit = defineEmits(['select'])
+const $emit = defineEmits(['click'])
 
-function onSelect(userId) {
-  $emit('select', { userId })
+function onClick(userId) {
+  $emit('click', { userId })
 }
 </script>
 

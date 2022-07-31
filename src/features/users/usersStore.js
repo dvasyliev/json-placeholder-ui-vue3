@@ -21,9 +21,7 @@ export const useUsersStore = defineStore('users', {
     },
 
     setUser(userId) {
-      const user = find(this.users, { id: userId })
-
-      this.user = user
+      this.user = find(this.users, { id: userId })
     },
 
     resetUser() {

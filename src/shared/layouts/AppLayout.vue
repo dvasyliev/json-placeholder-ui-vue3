@@ -51,6 +51,7 @@
     display: flex;
     flex-direction: column;
     flex-grow: 1;
+    max-width: calc(100% - 260px);
     background-color: #f3f4f6;
   }
 

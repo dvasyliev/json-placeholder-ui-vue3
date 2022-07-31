@@ -1,6 +1,6 @@
 <template>
   <h3>Choose your user</h3>
-  <UserList :users="users" @select="onSelectUser" />
+  <UserList :users="users" @click="onUserClick" />
   <button @click="$router.back()">Back</button>
 </template>
 
@@ -15,7 +15,7 @@ const { users } = storeToRefs(usersStore)
 
 usersStore.getUsers()
 
-function onSelectUser({ userId }) {
+function onUserClick({ userId }) {
   usersStore.setUser(userId)
   router.push({ name: 'posts' })
 }
