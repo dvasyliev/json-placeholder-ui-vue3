@@ -1,26 +1,37 @@
 <template>
-  <h2>Posts</h2>
-  <PostList :posts="posts" />
-  <Pagination
-    :limit="postsParams._limit"
-    :offset="postsParams._start"
-    :total="postsTotal"
-    @change="onPageChange"
-  />
+  <template v-if="isPostsLoading">Loading...</template>
+  <template v-if="isPostsReady">
+    <template v-if="postsError">
+      {{ postsError }}
+    </template>
+
+    <template v-else>
+      <h2>Posts</h2>
+      <PostList :posts="posts" />
+      <Pagination
+        :limit="Number(postsQuery.limit)"
+        :offset="Number(postsQuery.offset)"
+        :total="postsTotalCount"
+        @change="setPostsQuery"
+      />
+    </template>
+  </template>
 </template>
 
 <script setup>
-import { storeToRefs } from 'pinia'
-import { usePostsStore, PostList } from '@/features/posts'
 import Pagination from '@/shared/components/Pagination'
+import { PostList, usePostsState } from '@/features/posts'
 
-const postsStore = usePostsStore()
-const { posts, postsTotal, postsParams } = storeToRefs(postsStore)
+const {
+  getPosts,
+  posts,
+  postsTotalCount,
+  isPostsReady,
+  isPostsLoading,
+  postsError,
+  postsQuery,
+  setPostsQuery,
+} = usePostsState()
 
-function onPageChange({ limit, offset }) {
-  postsStore.setPostsParams({ _limit: limit, _start: offset })
-  postsStore.getPosts()
-}
-
-postsStore.getPosts()
+getPosts()
 </script>
